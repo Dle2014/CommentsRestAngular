@@ -1,0 +1,26 @@
+<div ng-controller="EditCommentCtrl">
+	<form class="form-horizontal">
+		<h1 class="page-header">Edit Comment({{comment.id}})</h1>
+		<fieldset>
+			<div class="control-group">
+				<label class="control-label" for="title">Text</label>
+				<div class="controls">
+					<input id="title" type="text" class="input-block-level"
+						required="true" ng-model="comment.text"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="title">Author</label>
+				<div class="controls">
+					<input id="title" type="text" class="input-block-level"
+						required="true" ng-model="comment.author"></input>
+				</div>
+			</div>
+
+		</fieldset>
+		<div class="form-actions">
+			<button ng-click="updateComment()" class="btn btn-primary">Update
+				Comment</button>
+		</div>
+	</form>
+</div>

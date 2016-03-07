@@ -1,0 +1,26 @@
+<div ng-controller="NewCommentCtrl">
+	<form class="form-horizontal">
+		<h1 class="page-header">New Comment</h1>
+		<fieldset>
+			<div class="control-group">
+				<label class="control-label" for="title">Text</label>
+				<div class="controls">
+					<input id="title" type="text" class="input-block-level"
+						required="true" ng-model="comment.text"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="title">Author</label>
+				<div class="controls">
+					<input id="title" type="text" class="input-block-level"
+						required="true" ng-model="comment.author"></input>
+				</div>
+			</div>
+
+		</fieldset>
+		<div class="form-actions">
+			<button class="btn btn-primary" ng-click="saveComment()">Add
+				Comment</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,34 @@
+<div ng-controller="CommentListCtrl">
+    <h1 class="page-header">Comment List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th width="25px">ID</th>
+                <th>TEXT</th>
+                <th>AUTHOR</th>
+                <th width="50px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="e in comments">
+                <td>{{e.id}}</td>
+                <td>{{e.text}}</td>
+                <td>{{e.author}}</td>
+                <!-- ng-show="user.id &&user.id==e.user_id" -->
+                <td><a ng-click="editComment($index)" ><i
+                            class="icon-pencil"></i>
+                    </a>
+                    &nbsp;
+                    <a ng-click="delComment($index)" ><i
+                            class="icon-remove-circle"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+<!-- ng-show="user.username" -->
+    <p>
+        <button type="button" class="btn btn-success" 
+                ng-click="addComment()">
+            <b class="icon-plus-sign"></b>Add Comment
+        </button>
+    </p>
+</div>
